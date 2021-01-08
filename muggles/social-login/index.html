@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Social Login &middot; phisch1991</title>
+        <meta name="description" content="What happens if I click on Login with Facebook?">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="generator" content="Hugo 0.79.0" />
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="Social Login">
+<meta property="og:description" content="What happens if I click on Login with Facebook?">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://phisch1991.github.io/muggles/social-login/">
+        <link rel="stylesheet" href="https://phisch1991.github.io/dist/site.css">
+        <link rel="stylesheet" href="https://phisch1991.github.io/dist/syntax.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        
+        
+        
+        
+        
+
+    </head>
+    <body>
+        
+<script type="application/javascript">
+var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+var doNotTrack = (dnt == "1" || dnt == "yes");
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'XXX', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+
+
+        <div id="wrapper">
+            <header class="site-header">
+                <div class="container">
+                    <div class="site-title-wrapper">
+                        
+                            <h1 class="site-title">
+                                <a href="https://phisch1991.github.io/">Philipp&#39;s blog about it</a>
+                            </h1>
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Twitter" aria-label="Twitter" href="https://twitter.com/phisch1991" rel="me" >
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                            </a>
+                        
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Github" aria-label="Github" href="https://github.com/phisch1991" rel="me">
+                                <i class="fa fa-github-alt" aria-hidden="true"></i>
+                            </a>
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Stack Overflow" aria-label="Stack Overflow" href="https://stackoverflow.com/users/13494257/philipp" rel="me">
+                                <i class="fa fa-stack-overflow" aria-hidden="true"></i>
+                            </a>
+                        
+                        
+                        
+                    </div>
+
+                    <ul class="site-nav">
+                        
+    <li class="site-nav-item">
+        <a href="/security/">Security stuff</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/tools/">Cool tools</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/muggles/">For muggles</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/page/about/">About</a>
+    </li>
+
+
+                    </ul>
+                </div>
+            </header>
+
+            <div id="container">
+
+
+<div class="container">
+    <article class="post-container">
+        <header class="post-header">
+    <h1 class="post-title">Social Login</h1>
+    
+        <p class="post-description">What happens if I click on Login with Facebook?</p>
+    
+</header>
+
+        <div class="post-content clearfix">
+    
+
+    <h2 id="before-we-start">Before we start</h2>
+<p>Have you ever used - or at least seen - the button <em>Login with Facebook</em> on a new web application you wanted to use? I guess for most non-IT people it is quite mysterious what happens if you click this button: You are suddenly logged in, the website knows your name and e-mail address and you don&rsquo;t even have to set another password for the new website.</p>
+<p>We could now take a look at technical terms and specifications, but let&rsquo;s start with a real world example everybody knows.</p>
+<h2 id="step-back-for-a-second">Step back for a second</h2>
+<p>How do you prove that you are allowed to drive cars when the police stops you? You take your <em>drivers license</em> and show it to the <em>police officer</em>. He/she then checks if the document is valid (i. e. not expired, not manipulated, etc.) Furthermore, the officer checks if the allowed <em>vehicle classes</em> on the license include the vehicle you currently drive.</p>
+<p>Where did you get your drivers license from? I guess your drivers license was issued by a <em>federal agency</em> (&ldquo;Bundesdruckerei&rdquo; in Germany) after you <em>proved that you are you</em> (e. g. with your national ID) and that you passed the driving exam. Of course, you trust this <em>federal agency</em>, otherwise you would not have given them so many information about yourself.</p>
+<p>Why does the <em>police officer</em> trust that you are allowed to drive cars? Obviously not (only) because <em>you</em> look trustworthy, but he trusts the <em>federal agency</em> which issued the license. Fortunately, this process is standardized, so at least within the EU other country&rsquo;s <em>police officers</em> will trust your drivers license as well.</p>
+<h2 id="social-login">Social login</h2>
+<p>The term social login just means that you do not create another username/password combination for a new web application you use, but you use a social network where you probably have an account anyway to log into this new application.</p>
+<p><strong>What happens if you click on such a social login button?</strong> First of all, you will be redirected to the social network, where you either have to enter your username and password or are already logged in as you recently used it. Then you probably will be asked, if you <em>agree</em>, that the social network hands over some of your personal information (such as e-mail, given name, last name, etc.) to the new web application. Afterwards you will be redirected to the web application again and can use it. Although you did not actively create an account there, they know who you are.</p>
+<p><strong>How does that work?</strong> Let&rsquo;s remember the police example from above. A long time ago, the <em>federal agency</em> checked that you are you. This process is called <em>authentication</em>. Afterwards they sent you a document called <em>drivers license</em> to you. This is called <em>issuance</em>. The same is happening with your social network. You created an account in your favorite social network (probably some time ago) and trusted them, that they will keep your information safe (well, many do not trust social networks, but share many information anyway, but that&rsquo;s another point). The account (username and password) is necessary to <em>authenticate</em> yourself, just like the <em>federal agency</em> did. Afterwards they <em>issued</em> a document called <em>token</em> with some information about you. With this token you went to the new web application and show it. Now the new application knows the things &ldquo;written&rdquo; on this <em>token</em> and thus knows your identity.</p>
+<p><strong>Why does the new application know, that the document is valid?</strong> Well, the police proves the validity of your <em>drivers license</em> by visually inspecting it for manipulations, by checking the expiry dates on the document and by checking the vehicle classes. Similarly, the web application can check if you or somebody else manipulated the token (of course not by visual checks, but with kind of a digital signature) and any other information contained in the token. The signature even has another function: The web application can decide if it trusts the signer or not. Furthermore, the <em>token</em> holds information about the validity period, so old <em>tokens</em> can be declined.</p>
+<h2 id="lets-get-a-bit-more-technical">Let&rsquo;s get a bit more technical</h2>
+<p>The standard used for this kind of login is called <a href="https://developer.okta.com/blog/2019/10/21/illustrated-guide-to-oauth-and-oidc">OAuth2/OIDCI</a>. I do not want to bother you with the details of the specification, however I would like to sum up the whole story and link it to some technial terms. I guess you already noticed, that some of the words in the text are italic. We will now compare them in the table below:</p>
+<table>
+<thead>
+<tr>
+<th>Police Example</th>
+<th>Social Login Example</th>
+<th>What&rsquo;s the correct term for it?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Drivers license</td>
+<td>Token</td>
+<td>Token</td>
+</tr>
+<tr>
+<td>Police officer</td>
+<td>Web application</td>
+<td>Resource server and client</td>
+</tr>
+<tr>
+<td>You</td>
+<td>You</td>
+<td>Resource Owner</td>
+</tr>
+<tr>
+<td>Federal agency</td>
+<td>Social network</td>
+<td>Authorization server</td>
+</tr>
+<tr>
+<td>Show national ID before receiving drivers licence</td>
+<td>Enter username &amp; password</td>
+<td>Authentication</td>
+</tr>
+<tr>
+<td>Check that vehicle class is correct</td>
+<td>check that you are allowed to access web application</td>
+<td>Authorization</td>
+</tr>
+<tr>
+<td>Get drivers license</td>
+<td>Get token</td>
+<td>Issuance</td>
+</tr>
+<tr>
+<td>Vehicle class and validity period</td>
+<td>E-mail address and validity period</td>
+<td>Token claim (any information can be a claim)</td>
+</tr>
+</tbody>
+</table>
+<p>I hope you now have at least a little understanding how things work :-)</p>
+<h2 id="what-i-didnt-mention">What I didn&rsquo;t mention</h2>
+<p>Of course, there are some slight differences between the police example and social login:</p>
+<ul>
+<li>While the validity period of your drivers license is several years, <em>tokens</em> usually expire very quickly. That is why your social network needs to issue <em>tokens</em> more frequently than your <em>federal agency</em> needs to issue drivers licenses.</li>
+<li>The communication process above is very simplified and of course more complex in reality. However, the overall principle is the same: You trust the social network, the web application trusts the social network, so the web application also kind of trusts you, although there is no direct relationship between the web application and you.</li>
+</ul>
+
+</div>
+
+        <footer class="post-footer clearfix"><div class="share">
+            <a class="icon-twitter" href="https://twitter.com/share?text=Social%20Login&url=https%3a%2f%2fphisch1991.github.io%2fmuggles%2fsocial-login%2f"
+                onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" aria-label="Share on Twitter">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+    </div>
+</footer>
+    </article>
+</div>
+
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="site-title-wrapper">
+                    <h1 class="site-title">
+                        <a href="https://phisch1991.github.io/">Philipp&#39;s blog about it</a>
+                    </h1>
+                    <a class="button-square button-jump-top js-jump-top" href="#" aria-label="Back to Top">
+                        <i class="fa fa-angle-up" aria-hidden="true"></i>
+                    </a>
+                </div>
+
+                <p class="footer-copyright">
+                    <span>&copy; 2021 / Powered by <a href="https://gohugo.io/">Hugo</a></span>
+                </p>
+                <p class="footer-copyright">
+                    <span><a href="https://github.com/roryg/ghostwriter">Ghostwriter theme</a> By <a href="http://jollygoodthemes.com">JollyGoodThemes</a></span>
+                    <span>/ <a href="https://github.com/jbub/ghostwriter">Ported</a> to Hugo By <a href="https://github.com/jbub">jbub</a></span>
+                </p>
+            </div>
+        </footer>
+
+        <script src="https://phisch1991.github.io/js/jquery-1.11.3.min.js"></script>
+        <script src="https://phisch1991.github.io/js/jquery.fitvids.js"></script>
+        <script src="https://phisch1991.github.io/js/scripts.js"></script>
+    </body>
+</html>
+

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tools on Philipp&#39;s blog about it</title>
+    <link>https://phisch1991.github.io/tools/</link>
+    <description>Recent content in Tools on Philipp&#39;s blog about it</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>phisch1991</copyright>
+    <lastBuildDate>Thu, 07 Jan 2021 18:00:00 +0100</lastBuildDate><atom:link href="https://phisch1991.github.io/tools/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Graphics in your documentation</title>
+      <link>https://phisch1991.github.io/tools/drawio/</link>
+      <pubDate>Thu, 07 Jan 2021 18:00:00 +0100</pubDate>
+      
+      <guid>https://phisch1991.github.io/tools/drawio/</guid>
+      <description>The problem A long time during my career we did not find a good solution for managing diagrams/figures within Markdown or AsciiDoc documentation. We had a source file (e. g. a Microsoft Visio file) and then rendered a pixel file which was included into the documentation. The challenges we had include:
+ The application required to modify the source file was not installed (due to cost saving, licensing or carelessness) The source file was on somebody elses computer and he/she did not upload it, so we either had to wait or (in the worst case) create the file again.</description>
+    </item>
+    
+  </channel>
+</rss>

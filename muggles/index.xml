@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Muggles on Philipp&#39;s blog about it</title>
+    <link>https://phisch1991.github.io/muggles/</link>
+    <description>Recent content in Muggles on Philipp&#39;s blog about it</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>phisch1991</copyright>
+    <lastBuildDate>Thu, 07 Jan 2021 18:00:00 +0100</lastBuildDate><atom:link href="https://phisch1991.github.io/muggles/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Social Login</title>
+      <link>https://phisch1991.github.io/muggles/social-login/</link>
+      <pubDate>Thu, 07 Jan 2021 18:00:00 +0100</pubDate>
+      
+      <guid>https://phisch1991.github.io/muggles/social-login/</guid>
+      <description>Before we start Have you ever used - or at least seen - the button Login with Facebook on a new web application you wanted to use? I guess for most non-IT people it is quite mysterious what happens if you click this button: You are suddenly logged in, the website knows your name and e-mail address and you don&amp;rsquo;t even have to set another password for the new website.</description>
+    </item>
+    
+  </channel>
+</rss>

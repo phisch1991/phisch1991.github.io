@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Securities on Philipp&#39;s blog about it</title>
+    <link>https://phisch1991.github.io/security/</link>
+    <description>Recent content in Securities on Philipp&#39;s blog about it</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>phisch1991</copyright>
+    <lastBuildDate>Thu, 07 Jan 2021 18:00:00 +0100</lastBuildDate><atom:link href="https://phisch1991.github.io/security/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Secrets as code</title>
+      <link>https://phisch1991.github.io/security/secrets-as-code/</link>
+      <pubDate>Thu, 07 Jan 2021 18:00:00 +0100</pubDate>
+      
+      <guid>https://phisch1991.github.io/security/secrets-as-code/</guid>
+      <description>Introduction One of the most challenging parts when running applications is how to handle secrets properly. Besides central key management tools such as Hashicorp Vault another approach has evolved: Handling secrets as code and manage them with the rest of your source code - encrypted of course. There are many tools supporting this way of working, such as Mozilla SOPS, kubesec and others.
+How does it work? To answer these questions, we need to know two things about these tools:</description>
+    </item>
+    
+  </channel>
+</rss>
